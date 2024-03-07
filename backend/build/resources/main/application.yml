@@ -1,0 +1,79 @@
+server:
+  port: 8080
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: secret
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_anbd?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+    hibernate:
+      ddl-auto: update
+
+  # security
+  security:
+    user:
+      name: user
+      password: 1234
+
+#  image:
+#    path: ./upload/product
+
+#  redis 사용이유 : 메모리에 데이터저장, database 저장보다 빠른 조회가 가능
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+    auth-code-expiration-millis: 1800000  # 30 * 60 * 1000 == 30분
+
+  config:
+    import: "application-secret.yml"
+
+app:
+  # 파일 업로드 경로
+  upload:
+    product:
+      path: upload
+# 터미널에 입력 자동 생성 - openssl rand -hex 64
+jwt:
+  header: Authorization
+  secret: c2d02f43172268a362005c0556d5b1dae3a6aa251e0efc8180ffb7e04cf6ad10a369751ff8b7e2f78d5d048eda490cd3d104ff5330fc5c84c13856da1246d7a2
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web.socket: DEBUG
+
+
+
+
+
+
+
+
