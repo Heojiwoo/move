@@ -1,0 +1,61 @@
+
+.admin-wrapper{
+    display: flex;
+    height: 100vh;
+}
+
+.admin-menu{
+    width: 200px;
+    padding: 16px;
+    border: 1px black solid;
+}
+
+.admin-content{
+    margin-left: 25px;
+    flex: 1;
+    padding: 16px;
+}
+
+.admin-chart{
+    border: 1px solid blue;
+    max-width: 1200px;
+    height: 300px;
+    margin: 20px;
+}
+
+.admin-category{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.admin-user-list{
+    border: 1px solid blue;
+    margin: 20px;
+    width: 800px;
+    height: 700px;
+}
+
+canvas{
+    width: 100%;
+}
+
+
+.modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 회색 배경색을 나타내는 rgba 값 */
+    z-index: 1000;
+  }
+
+  .show {
+    display: block;
+  }
+  
+  .hide {
+    display: none;
+  }

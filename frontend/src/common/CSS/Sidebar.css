@@ -1,0 +1,25 @@
+.sidebarBox {
+  flex: 1;
+  height: calc(100vh - 110px);
+
+  /* position: sticky; */
+  margin-top: 10%;
+  margin-inline: 4%;
+  display: block;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mainCategory {
+  font-family: 'yg-jalnan';
+  color: rgb(63, 73, 45);
+}
+
+.subCategory {
+  font-family: 'TheJamsil5Bold';
+  color: rgba(63, 73, 45, 0.822);
+}
